@@ -34,7 +34,6 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        // welcome to aisist email
         if (user?.emailVerified) {
           await resend.sendEmail({
             from: String(env.EMAIL_FROM),

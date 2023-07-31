@@ -11,7 +11,7 @@ export default function LogoutButton() {
         signOut({ callbackUrl: '/' });
       }}
     >
-      <span className="font-semibold"> Logout</span>
+      <span className="font-semibold">Logout</span>
     </Button>
   );
 }
