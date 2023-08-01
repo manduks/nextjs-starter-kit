@@ -11,6 +11,7 @@ const envSchema = z.object({
   SUPER_ADMIN_EMAIL: z.string().min(1),
   STRIPE_SECRET_KEY: z.string().min(1),
   STRIPE_WEBHOOK_KEY: z.string().min(1),
+  STRIPE_PRICE_ID: z.string().min(1),
 });
 
 const env = envSchema.parse(process.env);

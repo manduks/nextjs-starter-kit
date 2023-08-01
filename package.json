@@ -6,7 +6,8 @@
     "dev": "infisical run -- next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:studio": "infisical run -- npx prisma studio"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",

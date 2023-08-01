@@ -1,4 +1,4 @@
-import { getCurrentUser } from '@/lib/session';
+import { getCurrentUserSession } from '@/lib/session';
 import { redirect } from 'next/navigation';
 
 // @ts-ignore
@@ -7,7 +7,7 @@ export default async function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getCurrentUser();
+  const user = await getCurrentUserSession();
 
   if (!user) {
     return redirect('/');
