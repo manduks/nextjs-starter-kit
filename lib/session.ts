@@ -1,5 +1,6 @@
 import { authOptions } from '@/lib/auth';
 import { getServerSession } from 'next-auth/next';
+import prisma from '@/lib/prisma';
 
 export async function getCurrentUserSession() {
   const session = await getServerSession(authOptions);
@@ -36,7 +37,7 @@ export async function isProUser() {
       },
     },
   });
-  const organization = user.memberships[0].organization;
+  const organization = user?.memberships[0].organization;
 
-  return Boolean(organization.stripePriceId);
+  return Boolean(organization?.stripePriceId);
 }
